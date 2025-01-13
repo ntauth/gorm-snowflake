@@ -264,3 +264,8 @@ func (sns NamingStrategy) CheckerName(table, column string) string {
 func (sns NamingStrategy) IndexName(table, column string) string {
 	return sns.defaultNS.IndexName(table, column)
 }
+
+// SchemaName snowflake edition
+func (sns NamingStrategy) SchemaName(table string) string {
+	return sns.defaultNS.SchemaName(table)
+}
