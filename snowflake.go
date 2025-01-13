@@ -269,3 +269,8 @@ func (sns NamingStrategy) IndexName(table, column string) string {
 func (sns NamingStrategy) SchemaName(table string) string {
 	return sns.defaultNS.SchemaName(table)
 }
+
+// UniqueName snowflake edition
+func (sns NamingStrategy) UniqueName(table, column string) string {
+	return sns.defaultNS.UniqueName(table, column)
+}
